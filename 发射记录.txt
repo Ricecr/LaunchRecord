@@ -1,0 +1,130 @@
+//Table0(14)
+let
+    源 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content.html")),
+    Data = 源{0}[Data],
+    提升的标题 = Table.PromoteHeaders(Data, [PromoteAllScalars=true]),
+    更改的类型 = Table.TransformColumnTypes(提升的标题,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射地点", type text}}),
+
+    pageName = Text.Format({1-11}),
+    
+    源2 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_2.html")),
+    Data2 = 源2{0}[Data],
+    提升的标题2 = Table.PromoteHeaders(Data2, [PromoteAllScalars=true]),
+    //更改的类型2 = 提升的标题2,
+    更改的类型2 = Table.TransformColumnTypes(提升的标题2,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+
+    源3 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_3.html")),
+    Data3 = 源3{0}[Data],
+    提升的标题3 = Table.PromoteHeaders(Data3, [PromoteAllScalars=true]),
+    更改的类型3 = Table.TransformColumnTypes(提升的标题3,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+
+    源4 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_4.html")),
+    Data4 = 源4{0}[Data],
+    提升的标题4 = Table.PromoteHeaders(Data4, [PromoteAllScalars=true]),
+    更改的类型4 = Table.TransformColumnTypes(提升的标题4,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+
+    源5= Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_5.html")),
+    Data5 = 源5{0}[Data],
+    提升的标题5 = Table.PromoteHeaders(Data5, [PromoteAllScalars=true]),
+    更改的类型5 = Table.TransformColumnTypes(提升的标题5,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+
+    源6 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_6.html")),
+    Data6 = 源6{0}[Data],
+    提升的标题6 = Table.PromoteHeaders(Data6, [PromoteAllScalars=true]),
+    更改的类型6 = Table.TransformColumnTypes(提升的标题6,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+
+    源7 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_7.html")),
+    Data7 = 源7{0}[Data],
+    提升的标题7 = Table.PromoteHeaders(Data7, [PromoteAllScalars=true]),
+    更改的类型7 = Table.TransformColumnTypes(提升的标题7,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+    Data77 = 源7{1}[Data],
+    提升的标题77 = Table.PromoteHeaders(Data77, [PromoteAllScalars=true]),
+    更改的类型77 = Table.TransformColumnTypes(提升的标题77,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+
+    源8 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_8.html")),
+    Data8 = 源8{0}[Data],
+    提升的标题8 = Table.PromoteHeaders(Data8, [PromoteAllScalars=true]),
+    更改的类型8 = Table.TransformColumnTypes(提升的标题8,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+
+    源9 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_9.html")),
+    Data9 = 源9{0}[Data],
+    提升的标题9 = Table.PromoteHeaders(Data9, [PromoteAllScalars=true]),
+    更改的类型9 = Table.TransformColumnTypes(提升的标题9,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+
+    源10 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_10.html")),
+    Data10 = 源10{0}[Data],
+    提升的标题10 = Table.PromoteHeaders(Data10, [PromoteAllScalars=true]),
+    更改的类型10 = Table.TransformColumnTypes(提升的标题10,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+
+    源11 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_11.html")),
+    Data11 = 源11{0}[Data],
+    提升的标题11 = Table.PromoteHeaders(Data11, [PromoteAllScalars=true]),
+    更改的类型11 = Table.TransformColumnTypes(提升的标题11,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}}),
+
+    处理结果 = 更改的类型&更改的类型2&更改的类型3&更改的类型4&更改的类型5&更改的类型6&更改的类型7&更改的类型77&更改的类型8&更改的类型9&更改的类型10&更改的类型11
+in
+    处理结果
+
+
+
+//Document	
+(p as number) as table=>
+ 
+let
+    源 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_"&(Number.ToText(p))&".html")),
+    提升的标题 =
+    if p = 7 then 
+        Table.PromoteHeaders(源{0}[Data], [PromoteAllScalars=true])&Table.PromoteHeaders(源{1}[Data], [PromoteAllScalars=true])
+    else 
+        Table.PromoteHeaders(源{0}[Data], [PromoteAllScalars=true]),
+
+    //提升的标题 = Table.PromoteHeaders(Data0, [PromoteAllScalars=true]),
+    
+    更改的类型 = 
+    if p = 1 then
+        
+        Table.RenameColumns(
+            Table.TransformColumnTypes(提升的标题,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射地点", type text}}),{{"发射地点", "发射基地"}})
+    else 
+        Table.TransformColumnTypes(提升的标题,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}})
+in
+    更改的类型
+
+//调用的函数	
+let
+    源 = {1..11},
+    转换为表 = Table.FromList(源, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    已调用自定义函数 = Table.AddColumn(转换为表, "Document", each Document([Column1])),
+    #"展开的“Document”" = Table.ExpandTableColumn(已调用自定义函数, "Document", {"发射序号", "运载火箭", "发射日期", "卫星", "发射基地"}, {"Document.发射序号", "Document.运载火箭", "Document.发射日期", "Document.卫星", "Document.发射基地"})
+in
+    #"展开的“Document”"
+	
+//代码汇总
+let
+
+
+
+fx = (p as number) as table =>
+ 
+    let
+        源 = Web.Page(Web.Contents("http://www.spacechina.com/n25/n142/n152/n657792/c659355/content_"&(Number.ToText(p))&".html")),
+        提升的标题 =
+        if p = 7 then 
+            Table.PromoteHeaders(源{0}[Data], [PromoteAllScalars=true])&Table.PromoteHeaders(源{1}[Data], [PromoteAllScalars=true])
+        else 
+            Table.PromoteHeaders(源{0}[Data], [PromoteAllScalars=true]),
+        
+        更改的类型 = 
+        if p = 1 then
+            
+            Table.RenameColumns(
+                Table.TransformColumnTypes(提升的标题,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射地点", type text}}),{{"发射地点", "发射基地"}})
+        else 
+            Table.TransformColumnTypes(提升的标题,{{"发射序号", Int64.Type}, {"运载火箭", type text}, {"发射日期", type date}, {"卫星", type text}, {"发射基地", type text}})
+    in
+        更改的类型,
+
+    结果 = Table.Combine(List.Transform({1..11},fx)),
+    替换的值 = Table.ReplaceValue(结果,"#(cr)#(lf)","",Replacer.ReplaceText,{"发射基地"})
+in
+    替换的值
