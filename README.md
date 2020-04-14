@@ -2,7 +2,7 @@
 
 Web.Contents处理网页，
 
-[发射记录]: http://www.spacechina.com/n25/n142/n152/n657792/	"发射记录"
+[发射记录]: (http://www.spacechina.com/n25/n142/n152/n657792/)	"发射记录"
 
 将网页表格处理成本地 .xlsx 格式，有如下问题使用PowerQuery解决：
 
